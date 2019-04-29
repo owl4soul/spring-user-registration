@@ -22,7 +22,7 @@ public class UserList implements Observer {
         return userListSingletone;
     }
 
-    public static List<User> getUserList() {
+    public List<User> getUserList() {
         return userList;
     }
 
@@ -30,9 +30,19 @@ public class UserList implements Observer {
         UserList.userList = userList;
     }
 
+    public User getUserByUsername(String userName) {
+        for (int i = 0; i < userList.size(); i++) {
+            if (userList.get(i).getUserName().equals(userName)) {
+                return userList.get(i);
+            }
+        }
+        return null;
+    }
+
     @Override
     public void update(Observer observer, User user) {
         userList.add(user);
         System.out.println("user added to list"); //todo remove it later
     }
+
 }

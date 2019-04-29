@@ -12,7 +12,8 @@
 </head>
 <body>
 Are you sure about this action?
-<button type="submit">Yes, delete it</button>
+Delete user ${user}?
+<input type="button" value="Delete this user" onClick='location.href="/deleteUserSuccess"'><br>
 <input type="button" onclick="history.back();" value="No, go back now"/>
 </body>
 </html>

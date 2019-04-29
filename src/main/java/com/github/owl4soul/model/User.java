@@ -31,6 +31,42 @@ public class User implements Subject {
         this.notifyObservers();
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public long getPhone() {
+        return phone;
+    }
+
+    public void setPhone(long phone) {
+        this.phone = phone;
+    }
+
     @Override
     public String toString() {
         String toString = "{"
@@ -45,7 +81,7 @@ public class User implements Subject {
     public void registerObserver(Observer observer) {
         if (!observers.contains(observer)) {
             observers.add(observer);
-            System.out.println("observer have been registered");
+            System.out.println("observer has been registered");
         }
     }
 

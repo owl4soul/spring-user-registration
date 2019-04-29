@@ -13,10 +13,10 @@ public class AddUserController {
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public ModelAndView showForm() {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("/views/addUser");
-        modelAndView.addObject("registrationForm", new RegistrationForm());
-        return modelAndView;
+        ModelAndView result = new ModelAndView();
+        result.setViewName("/views/addUser");
+        result.addObject("registrationForm", new RegistrationForm());
+        return result;
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
@@ -32,9 +32,10 @@ public class AddUserController {
                 ._lastName(lastName)
                 ._phone(phone));
 
-        ModelAndView modelAndView = new ModelAndView("/views/addUserSuccess");
-        modelAndView.addObject("user", user);
-        modelAndView.addObject("list", UserList.getUserList());
-        return modelAndView;
+        ModelAndView result = new ModelAndView("/views/addUserSuccess");
+        result.addObject("user", user);
+        result.addObject("list", UserList.userListSingletone.getUserList());
+
+        return result;
     }
 }
