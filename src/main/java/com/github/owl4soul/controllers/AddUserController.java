@@ -23,6 +23,7 @@ public class AddUserController {
     public ModelAndView addUser(RegistrationForm registrationForm) {
         UserService service = new UserService();
         String userName = registrationForm.getName();
+        String password = registrationForm.getPassword();
         String firstName = registrationForm.getFirst();
         String lastName = registrationForm.getLast();
         long phone = registrationForm.getPhone();
@@ -30,6 +31,7 @@ public class AddUserController {
 
         User user = new User(new User.UserBuilder()
                 ._userName(userName)
+                ._password(password)
                 ._firstName(firstName)
                 ._lastName(lastName)
                 ._phone(phone)

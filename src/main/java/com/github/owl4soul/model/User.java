@@ -19,6 +19,9 @@ public class User {
     @Column(name = "username")
     private String userName;
 
+    @NotNull
+    @Column(name = "password")
+    private String password;
 
     @Column(name = "firstname")
     private String firstName;
@@ -32,6 +35,7 @@ public class User {
     private long phone;
 
     @NotNull
+    @NaturalId
     @Column(name = "email")
     private String email;
 
@@ -45,6 +49,7 @@ public class User {
 
     public User(UserBuilder userBuilder) {
         this.userName = userBuilder.userName;
+        this.password = userBuilder.password;
         this.firstName = userBuilder.firstName;
         this.lastName = userBuilder.lastName;
         this.phone = userBuilder.phone;
@@ -105,6 +110,14 @@ public class User {
         this.dateTime = dateTime;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public String toString() {
         String toString = "{"
@@ -120,6 +133,7 @@ public class User {
     //Builder
     public static class UserBuilder {
         private String userName;
+        private String password;
         private String firstName;
         private String lastName;
         private long phone;
@@ -127,6 +141,11 @@ public class User {
 
         public UserBuilder _userName(String userName) {
             this.userName = userName;
+            return this;
+        }
+
+        public UserBuilder _password(String password) {
+            this.password = password;
             return this;
         }
 

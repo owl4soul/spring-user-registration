@@ -22,3 +22,9 @@ create unique index user_account_username_uindex
 alter table user_account
   add date timestamp not null;
 
+-- password
+alter table user_account
+  add password varchar(31) not null;
+
+
+
