@@ -40,7 +40,7 @@ public class UserService {
         return userDAO.findUserById(id);
     }
 
-    public List<User> findByUsername(String likeName) {
-        return userDAO.findByUsername(likeName);
+    public User findByUsername(String username) {
+        return userDAO.findByUsername(username);
     }
 }

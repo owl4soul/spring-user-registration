@@ -2,6 +2,7 @@ package com.github.owl4soul.model;
 
 import com.github.owl4soul.interfaces.Observer;
 import com.github.owl4soul.interfaces.Subject;
+import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -23,6 +24,7 @@ public class User {
     private int id;
 
     @NotNull
+    @NaturalId
     @Column(name = "username")
     private String userName;
 

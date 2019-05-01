@@ -13,7 +13,12 @@
 <body>
 Are you sure about this action?
 Delete user ${user}?
-<input type="button" value="Delete this user" onClick='location.href="/deleteUserSuccess"'><br>
-<input type="button" onclick="history.back();" value="No, go back now"/>
+
+<form action="/deleteUserSuccess"  method="post">
+    <input type="hidden" name="username" value="${user.userName}">
+    <button type="submit" name="command" value="deleteButton">Delete this user</button>
+    <input type="button" onclick="history.back();" value="No, go back now"/>
+</form>
+
 </body>
 </html>

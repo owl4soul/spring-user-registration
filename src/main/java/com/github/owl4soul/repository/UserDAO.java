@@ -74,12 +74,26 @@ public class UserDAO {
         return listUsers;
     }
 
-    public List<User> findByUsername(String likeName) {
+    public User findByUsername(String username) {
+        User user = HibernateSessionFactoryUtil
+                .getSessionFactory()
+                .openSession()
+                .byNaturalId(User.class)
+                .using("userName", username)
+                .load();
+
+//        User user = (User) HibernateSessionFactoryUtil
+//                .getSessionFactory()
+//                .openSession().getEnabledFilter("from User u where u.userName = :username");
+        return user;
+    }
+
+    public List<User> findByFirstName(String likeFirstName) {
         List<User> listNews = HibernateSessionFactoryUtil
                 .getSessionFactory()
                 .openSession()
                 .createQuery("from User u where u.userName like concat('%', :name, '%') ", User.class)
-                .setParameter("name", likeName)
+                .setParameter("name", likeFirstName)
                 .list();
         return listNews;
     }

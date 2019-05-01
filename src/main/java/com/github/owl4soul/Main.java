@@ -10,17 +10,14 @@ public class Main {
         UserDAO dao = new UserDAO();
 
         User use = new User.UserBuilder()
-                ._userName("owl4soul")
+                ._userName("qwew")
                 ._firstName("Lera")
                 ._lastName("Feoktistova")
                 ._phone(89999881510l)
-                ._email("emailnew@gmail.com").build();
+                ._email("emailnew@gmqwawil.comw").build();
         dao.save(use);
 
-        List<User> userList = dao.findByUsername("owl");
-        for (User u : userList) {
-            System.out.println(u);
-        }
+        dao.delete(dao.findByUsername("qwew"));
 
     }
 }
