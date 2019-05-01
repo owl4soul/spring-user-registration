@@ -12,7 +12,7 @@ public class MainController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index() {
-        new User().registerObserver(UserList.initUserList());
+//        new User().registerObserver(UserList.initUserList());
         return "views/index";
     }
 }

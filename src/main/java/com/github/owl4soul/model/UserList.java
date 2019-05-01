@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 //Bidder to observe User
+@Deprecated
 public class UserList implements Observer {
     public static UserList userListSingletone;
     private static List<User> userList = new ArrayList<>();

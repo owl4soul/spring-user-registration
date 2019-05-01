@@ -12,3 +12,7 @@ create table user_data
     on update cascade on delete cascade
 );
 
+-- add date of the last update
+alter table user_data
+  add date timestamp not null;
+
