@@ -1,0 +1,14 @@
+-- user's posts
+create table user_data
+(
+  id serial not null
+    constraint user_data_pk
+    primary key,
+  name varchar(255),
+  content varchar(65535),
+  user_id int
+    constraint user_data_user_account_id_fk
+    references user_account
+    on update cascade on delete cascade
+);
+

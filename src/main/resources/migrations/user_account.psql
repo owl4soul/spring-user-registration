@@ -1,0 +1,18 @@
+-- user registration data
+create table user_account
+(
+  id serial not null
+    constraint user_account_pk
+    primary key,
+  username varchar(255) not null,
+  firstname varchar(255),
+  lastname varchar(255),
+  phone bigint,
+  email varchar(255) not null
+);
+
+create unique index user_account_email_uindex
+  on user_account (email);
+
+create unique index user_account_username_uindex
+  on user_account (username);
