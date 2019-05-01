@@ -14,21 +14,24 @@
 <body>
 You can register new user here:
 <br>
-<form:form method="post" modelAttribute="addUser" lang="en">
+<form:form method="post" modelAttribute="registrationForm" lang="en">
 
     <tr bgcolor="#c8d8f8">
         <td valign=top>
             Username:
-            <input type="text" name="name" value="" size=25 maxlength=30></td>
+            <input type="text" name="name" value="" size=30 maxlength=255></td>
         <td valign=top>
             First name:
-            <input type="text" name="first" value="" size=50 maxlength=30></td>
+            <input type="text" name="first" value="" size=25 maxlength=50></td>
         <td valign=top>
             Last name:
-            <input type="text" name="last" value="" size=50 maxlength=30></td>
+            <input type="text" name="last" value="" size=25 maxlength=50></td>
         <td valign=top>
             Phone name:
-            <input type="text" name="phone" value="" size=50 maxlength=30></td>
+            <input type="text" name="phone" value="" size=25 maxlength=50></td>
+        <td valign=top>
+            Email:
+            <input type="text" name="email" value="" size=30 maxlength=50></td>
 
     </tr>
     <input type="submit" value="Register new user">

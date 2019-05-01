@@ -13,12 +13,14 @@
 </head>
 <body>
 <h1>User registration was successful. </h1>
-    A new user with parameters ${user} has been registered.<br>
+A new user with parameters ${user} has been registered.<br>
 
 <br><h4>Here you can see the list of all users have been added in current session:</h4><br>
 <table>
     <c:forEach items="${list}" var="usr">
-        ${usr}
+
+        <tr>
+            <td>${usr}</td>
         <tr>
             <td>
                 <form action="/edit" method="get">
@@ -27,11 +29,17 @@
                 </form>
             </td>
 
-            <td><form action="/delete" method="get">
-                <input type="hidden" name="deleteByName" value="${usr.userName}">
-                <button type="submit" name="command" value="deleteButton">Delete user</button>
-            </form></td>
+
+            <td>
+                <form action="/delete" method="get">
+                    <input type="hidden" name="deleteByName" value="${usr.userName}">
+                    <button type="submit" name="command" value="deleteButton">Delete user</button>
+                </form>
+            </td>
         </tr>
+        </tr>
+
+        <br>
     </c:forEach>
 </table>
 </body>

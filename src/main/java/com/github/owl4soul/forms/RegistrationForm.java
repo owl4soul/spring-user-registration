@@ -5,6 +5,7 @@ public class RegistrationForm {
     private String first;
     private String last;
     private long phone;
+    private String email;
 
     public String getName() {
         return name;
@@ -36,5 +37,13 @@ public class RegistrationForm {
 
     public void setPhone(long phone) {
         this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
