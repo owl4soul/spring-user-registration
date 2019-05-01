@@ -1,23 +1,14 @@
 package com.github.owl4soul.model;
 
-import com.github.owl4soul.interfaces.Observer;
-import com.github.owl4soul.interfaces.Subject;
 import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Table(name = "user_account")
 public class User {
-//    private static List<Observer> observers = new ArrayList<>();
-//    private Observer observer;
-
-//    private static long counter = 0;
-
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -60,7 +51,6 @@ public class User {
         this.email = userBuilder.email;
         this.dateTime = LocalDateTime.now();
 
-//        this.notifyObservers(); //todo remove it
     }
 
     public long getId() {
@@ -126,26 +116,6 @@ public class User {
                 + "email: " + email + "}";
         return toString;
     }
-
-//    @Override
-//    public void registerObserver(Observer observer) {
-//        if (!observers.contains(observer)) {
-//            observers.add(observer);
-//            System.out.println("observer has been registered");
-//        }
-//    }
-//
-//    @Override
-//    public void removeObserver(Observer observer) {
-//        observers.remove(observer);
-//    }
-//
-//    @Override
-//    public void notifyObservers() {
-//        for (Observer obs : observers) {
-//            obs.update(this.observer, this);
-//        }
-//    }
 
     //Builder
     public static class UserBuilder {

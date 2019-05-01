@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="com.github.owl4soul.model.UserList" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: owl
   Date: 4/29/19
@@ -22,6 +22,7 @@ A new user with parameters ${user} has been registered.<br>
         <tr>
             <td>${usr}</td>
         <tr>
+        <tr>
             <td>
                 <form action="/edit" method="get">
                     <input type="hidden" name="editByName" value="${usr.userName}">
@@ -38,8 +39,7 @@ A new user with parameters ${user} has been registered.<br>
             </td>
         </tr>
         </tr>
-
-        <br>
+        </tr>
     </c:forEach>
 </table>
 </body>

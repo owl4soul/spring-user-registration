@@ -2,7 +2,6 @@ package com.github.owl4soul.controllers;
 
 import com.github.owl4soul.forms.RegistrationForm;
 import com.github.owl4soul.model.User;
-import com.github.owl4soul.model.UserList;
 import com.github.owl4soul.services.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
