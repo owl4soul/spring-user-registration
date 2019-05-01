@@ -65,7 +65,7 @@ public class UserDAO {
         return user;
     }
 
-    public List<User> findAll() {
+    public List<User> findAllUsers() {
         List<User> listUsers = HibernateSessionFactoryUtil
                 .getSessionFactory()
                 .openSession()
