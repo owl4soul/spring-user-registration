@@ -16,28 +16,52 @@ You can register new user here:
 <br>
 <form:form method="post" modelAttribute="registrationForm" lang="en">
 
-    <tr bgcolor="#c8d8f8">
+    <table>
         <tr valign=top>
-            Username:
-            <input type="text" name="name" value="" size=30 maxlength=255></tr>
+            <td>
+                Username:
+                <input type="text" name="name" value="" size=30 maxlength=255>
+            </td>
+        </tr>
         <tr valign=top>
-            Password:
-            <input type="text" name="password" value="" size=30 maxlength=31></tr>
+            <td>
+                Password:
+                <input type="text" name="password" value="" size=30 maxlength=31>
+            </td>
+        </tr>
         <tr valign=top>
-            First name:
-            <input type="text" name="first" value="" size=25 maxlength=50></tr>
+            <td>
+                Confirm password:
+                <input type="text" name="password" value="" size=30 maxlength=31>
+            </td>
+        </tr>
         <tr valign=top>
-            Last name:
-            <input type="text" name="last" value="" size=25 maxlength=50></tr>
+            <td>
+                First name:
+                <input type="text" name="first" value="" size=25 maxlength=50>
+            </td>
+        </tr>
         <tr valign=top>
-            Phone name:
-            <input type="text" name="phone" value="" size=25 maxlength=50></tr>
+            <td>
+                Last name:
+                <input type="text" name="last" value="" size=25 maxlength=50>
+            </td>
+        </tr>
         <tr valign=top>
-            Email:
-            <input type="text" name="email" value="" size=30 maxlength=50></tr>
+            <td>
+                Phone name:
+                <input type="text" name="phone" value="" size=25 maxlength=50>
+            </td>
+        </tr>
+        <tr valign=top>
+            <td>
+                Email:
+                <input type="text" name="email" value="" size=30 maxlength=50>
+            </td>
+        </tr>
 
-    </tr>
-    <input type="submit" value="Register new user">
+        </tr>
+        <input type="submit" value="Register new user">
     </table>
 </form:form>
 </body>

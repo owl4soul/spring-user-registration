@@ -3,6 +3,7 @@ package com.github.owl4soul.forms;
 public class RegistrationForm {
     private String name;
     private String password;
+    private String confirmPassword;
     private String first;
     private String last;
     private long phone;
@@ -22,6 +23,14 @@ public class RegistrationForm {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getConfirmPassword() {
+        return confirmPassword;
+    }
+
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
     }
 
     public String getFirst() {
