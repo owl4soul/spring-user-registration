@@ -35,7 +35,6 @@ public class User {
     private long phone;
 
     @NotNull
-    @NaturalId
     @Column(name = "email")
     private String email;
 

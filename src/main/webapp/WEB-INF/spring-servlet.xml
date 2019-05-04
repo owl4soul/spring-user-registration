@@ -10,4 +10,12 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <!--<bean id="fieldMatchValidator" class="com.github.owl4soul.validation.FieldMatchValidator">-->
+
+    <!--</bean>-->
+    <!--<bean id="validator"-->
+          <!--class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">-->
+    <!--</bean>-->
+
+
 </beans>

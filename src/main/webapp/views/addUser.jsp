@@ -32,7 +32,7 @@ You can register new user here:
         <tr valign=top>
             <td>
                 Confirm password:
-                <input type="text" name="password" value="" size=30 maxlength=31>
+                <input type="text" name="confirmPassword" value="" size=30 maxlength=31>
             </td>
         </tr>
         <tr valign=top>

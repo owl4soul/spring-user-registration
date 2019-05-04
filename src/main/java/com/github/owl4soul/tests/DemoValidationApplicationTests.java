@@ -21,13 +21,13 @@ public class DemoValidationApplicationTests {
         validator = validatorFactory.usingContext().getValidator();
     }
 
-    @Test
-    public void testValidators() {
-        final RegistrationForm registrationForm = new RegistrationForm("sdssd", "sdsd");
-
-        Set<ConstraintViolation<RegistrationForm>> validates = validator.validate(registrationForm);
-        Assert.assertTrue(validates.size() > 0);
-        validates.stream().map(v -> v.getMessage())
-                .forEach(System.out::println);
-    }
+//    @Test
+//    public void testValidators() {
+//        final RegistrationForm registrationForm = new RegistrationForm("sdssd", "sdsd");
+//
+//        Set<ConstraintViolation<RegistrationForm>> validates = validator.validate(registrationForm);
+//        Assert.assertTrue(validates.size() > 0);
+//        validates.stream().map(v -> v.getMessage())
+//                .forEach(System.out::println);
+//    }
 }
